@@ -12,7 +12,7 @@ function _git_prompt_info() {
     fi
 }
 
-local ret_status="%(?:%{$fg[green]%}:%{$fg[red]%})%#%{$reset_color%}"
+local ret_status="%(?:%{$fg[green]%}:%{$fg[red]%})%(!.#.$)%{$reset_color%}"
 local ret_code="%(?:"":%{$fg[red]%}%?%{$reset_color%}|)"
 
 # defalut prompt
