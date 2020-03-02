@@ -1,7 +1,7 @@
 # Get current time
 function _current_time() {
     local current_time=`date +%H:%M:%S`
-    echo "🕑%{$fg[cyan]%}$current_time%{$reset_color%}"
+    echo "%{$fg[cyan]%}$current_time%{$reset_color%}"
 }
 
 function _git_prompt_info() {
@@ -16,7 +16,7 @@ local ret_status="%(?:%{$fg[green]%}:%{$fg[red]%})%(!.#.$)%{$reset_color%}"
 local ret_code="%(?:"":%{$fg[red]%}%?%{$reset_color%}|)"
 
 # defalut prompt
-PROMPT='[%{$fg_bold[green]%}%n%{$reset_color%}@%{$fg[cyan]%}%m %~%{$reset_color%}$(_git_prompt_info)%{$reset_color%}]${ret_status}'
+PROMPT='[%{$fg_bold[green]%}%n%{$reset_color%}@%{$fg[cyan]%}%m %~%{$reset_color%}$(_git_prompt_info)%{$reset_color%}]${ret_status} '
 # right prompt
 RPROMPT='${ret_code}$(_current_time)'
 
